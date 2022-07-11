@@ -1,4 +1,5 @@
 from modules.wordlist import words
+from modules.brute import generate
 import sys
 
 # TODO: Move this all messages to module
@@ -34,18 +35,22 @@ def main():
             else:
                 print("\033[91mERROR:\033[00m Word \""+arg+"\" is not correct.")
                 break
-            #print(knownWords)
-            if len(knownWords) > 24:
-                print("\033[91mERROR:\033[00m"+'''
-                You entered more than 24 words. do you really need tonrecover?
-                Use -h for help
-                ''')
-            elif len(knownWords) <= 15:
-                print("\u001b[33mWARNING:\033[00m"+'''
-                You entered less than 15 words. Seed-phrase search will take forever
-                ''')
-            if input("Start? (y\\n)") == 'y':
-                start = True
+    #print(knownWords)
+    if len(knownWords) > 24:
+        print("\033[91mERROR:\033[00m"+'''
+        You entered more than 24 words. do you really need tonrecover?
+        Use -h for help
+        ''')
+    elif len(knownWords) <= 15:
+        print("\u001b[33mWARNING:\033[00m"+'''
+        You entered less than 15 words. Seed-phrase search will take forever
+        ''')
+    if input("Start? (y\\n)") == 'y':
+        start = True
+    else:
+        sys.exit()
+    if start:
+        generate(knownWords)
 
 if __name__ == "__main__":
     main()

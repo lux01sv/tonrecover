@@ -2051,6 +2051,3 @@ words = (
   'zone',
   'zoo'
 )
-
-def genWordString(): # This function must generate word list
-  pass               # with itertools.combinations()
