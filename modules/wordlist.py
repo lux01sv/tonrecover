@@ -1,3 +1,6 @@
+import itertools
+
+# TON use BIP-39 wordlist, like Bitcoin do
 words = (
   'abandon',
   'ability',
@@ -2048,3 +2051,6 @@ words = (
   'zone',
   'zoo'
 )
+
+def genWordString(): # This function must generate word list
+  pass               # with itertools.combinations()
