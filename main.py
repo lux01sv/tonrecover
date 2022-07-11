@@ -41,8 +41,8 @@ def main():
         print("\u001b[33mWARNING:\033[00m"+'''
         You entered less than 15 words. Phrase search will take forever
         ''')
-        if input("Do you really want to start? (y\\n)") == 'y':
-            start = True
+    if input("Start? (y\\n)") == 'y':
+        start = True
 
 if __name__ == "__main__":
     main()
