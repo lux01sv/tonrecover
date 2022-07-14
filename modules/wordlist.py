@@ -1,5 +1,3 @@
-import itertools
-
 # TON use BIP-39 wordlist, like Bitcoin do
 words = (
   'abandon',
